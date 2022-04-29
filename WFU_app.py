@@ -8,16 +8,27 @@ from matplotlib import dates
 from datetime import datetime
 from matplotlib import pyplot as plt
 
+firebaseConfig = {
+  'apiKey': "AIzaSyALlvQxwI5ASv5r5Bk8pvTIlrKkblEWRHE",
+  'authDomain': "weatherforu-8df40.firebaseapp.com",
+  'projectId': "weatherforu-8df40",
+  'databaseURL': "https://console.firebase.google.com/u/0/project/weatherforu-8df40/database/weatherforu-8df40-default-rtdb/data/~2F",
+  'storageBucket': "weatherforu-8df40.appspot.com",
+  'messagingSenderId': "15281553463",
+  'appId': "1:15281553463:web:7c5de29fc13dd8e5093fb2",
+  'measurementId': "G-H0N4RMKN4X"
+}
+
 owm = pyowm.OWM('606ba0a989dbd4bd42c1bddc9139ebe2')
 mgr = owm.weather_manager()
 
-# st.title("5 Day Weather Forcast")
-# st.write("### Write the name of a City and select the Temperature Unit and Graph Type from the sidebar")
-# place = st.text_input("Name Of The City:", "")
-# if place==None:
-#     st.write("Input a city!")
-# unit=st.selectbox("Select Temperature Unit",("Celsius","Fahrenheit"))
-# g_type=st.selectbox("Select Graph Type",("Line Graph","Bar Graph"))
+st.title("5 Day Weather Forcast")
+st.write("### Write the name of a City and select the Temperature Unit and Graph Type from the sidebar")
+place = st.text_input("Name Of The City:", "")
+if place==None:
+    st.write("Input a city!")
+unit=st.selectbox("Select Temperature Unit",("Celsius","Fahrenheit"))
+g_type=st.selectbox("Select Graph Type",("Line Graph","Bar Graph"))
 
 #Firebase Authentication
 firebase = pyrebase.initialize_app(firebaseConfig)

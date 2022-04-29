@@ -1,4 +1,4 @@
-const firebaseConfig = {
+firebaseConfig = {
   'apiKey': "AIzaSyALlvQxwI5ASv5r5Bk8pvTIlrKkblEWRHE",
   'authDomain': "weatherforu-8df40.firebaseapp.com",
   'projectId': "weatherforu-8df40",
@@ -7,4 +7,4 @@ const firebaseConfig = {
   'messagingSenderId': "15281553463",
   'appId': "1:15281553463:web:7c5de29fc13dd8e5093fb2",
   'measurementId': "G-H0N4RMKN4X"
-};
+}
