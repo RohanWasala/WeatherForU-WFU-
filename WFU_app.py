@@ -1,4 +1,4 @@
-import Firebase_configkey
+from Firebase_configkey import firebaseConfig 
 import pyrebase
 import os
 import pytz
@@ -7,17 +7,6 @@ import streamlit as st
 from matplotlib import dates
 from datetime import datetime
 from matplotlib import pyplot as plt
-
-firebaseConfig = {
-  'apiKey': "AIzaSyALlvQxwI5ASv5r5Bk8pvTIlrKkblEWRHE",
-  'authDomain': "weatherforu-8df40.firebaseapp.com",
-  'projectId': "weatherforu-8df40",
-  'databaseURL': "https://console.firebase.google.com/u/0/project/weatherforu-8df40/database/weatherforu-8df40-default-rtdb/data/~2F",
-  'storageBucket': "weatherforu-8df40.appspot.com",
-  'messagingSenderId': "15281553463",
-  'appId': "1:15281553463:web:7c5de29fc13dd8e5093fb2",
-  'measurementId': "G-H0N4RMKN4X"
-}
 
 owm = pyowm.OWM('606ba0a989dbd4bd42c1bddc9139ebe2')
 mgr = owm.weather_manager()
